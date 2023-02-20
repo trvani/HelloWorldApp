@@ -10,7 +10,7 @@ import { HttpResponse } from '@angular/common/http';
 })
 export class MainpageComponent implements OnInit {
 
-  message! :string;
+  public message! :string;
    
   constructor(private helloworldservice: HelloworldfuncService) 
   {
@@ -28,9 +28,9 @@ export class MainpageComponent implements OnInit {
 
   callFunction(){
     this.helloworldservice.callAzureFunction().then(data =>{
-      console.log(data);
-      data.subscribe((data:any) => {
+      data.subscribe((data:string) => {
         this.message = data;
+        return;
       })
     });
     

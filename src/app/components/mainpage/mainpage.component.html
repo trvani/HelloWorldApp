@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row ">
     <div class="col-md-6 mx-auto">
       <div class="card">
         <div class="card-body">
@@ -6,14 +6,16 @@
             <span class="text-primary"><i class="fa fa-lock"></i>Please Press </span> Button
           </h1>
          
-          <div class="form-group">
-            <label for="email">Message from Azure!</label>
-            <label>deneme  {{message}}</label>
-          </div>
-          <button (click)="onSubmit()">Click</button>
-
-        
-        </div>
+          <form (submit)="onSubmit()">
+            <fieldset >
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Message">
+                <label  for="floatingInputDisabled">{{message}}</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Click</button>
+            </fieldset>
+          </form>
+          
       </div>
    </div>
 </div>
