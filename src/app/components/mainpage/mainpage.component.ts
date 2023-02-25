@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HelloworldfuncService } from 'src/app/services/helloworldfunc.service';
 import {Observable, timer} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { HttpResponse } from '@angular/common/http';
 
 @Component({

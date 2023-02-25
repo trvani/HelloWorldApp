@@ -19,8 +19,5 @@ export class HelloworldfuncService {
     const response = await this.http.get(url,{responseType : 'text'});
     return response;
 
-    // return new Promise((response: HttpResponse) => {
-    //   this.http.get('https://helloworld-func.azurewebsites.net/api/HelloWorld?code=GemuC3P1f9bo-A8gPECZXLgWw01GodzQu8S1oygyS7hhAzFu2CEyKA==&clientId=default');
-    // });
   }
 }
