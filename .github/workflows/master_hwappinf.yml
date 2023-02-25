@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - helloworldappin
+name: Build and deploy Node.js app to Azure Web App - hwappinf
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          
+      
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -49,7 +49,7 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'helloworldappin'
+          app-name: 'hwappinf'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EBF09E9A0077491783CA6C7C0291D0D8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B9783185B5F847F58AD39B8BA1063AFA }}
           package: .
