@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainpageComponent } from './mainpage.component';
+import { HelloworldfuncService } from 'src/app/services/helloworldfunc.service';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MainpageComponent', () => {
   let component: MainpageComponent;
@@ -8,7 +10,9 @@ describe('MainpageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainpageComponent ]
+      declarations: [ MainpageComponent ],
+      providers: [ HelloworldfuncService ],
+      imports: [ HttpClientModule ] // Add HttpClientModule here
     })
     .compileComponents();
 
